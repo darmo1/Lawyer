@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -22,10 +23,13 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
+          <Link>
           <a href="/transito-y-transporte" className={styles.card}>
             <h2> Transito &rarr;</h2>
             <p>Genera Petición de revocatoria y subsidiaria petición de información </p>
           </a>
+          </Link>
+         
 
          
            
