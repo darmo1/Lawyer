@@ -23,8 +23,8 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <Link>
-          <a href="/transito-y-transporte" className={styles.card}>
+          <Link href="/transito-y-transporte">
+          <a  className={styles.card}>
             <h2> Transito &rarr;</h2>
             <p>Genera Petición de revocatoria y subsidiaria petición de información </p>
           </a>
