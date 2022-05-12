@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -14,3 +18,33 @@ a {
 * {
   box-sizing: border-box;
 }
+
+input {
+  display: block;
+  border: solid thin gray;
+  border-radius: .33rem;
+  width: 100%;
+  padding: 3px 10px;
+  color: black;
+}
+
+input[type="date"] {
+  width: auto;
+}
+
+label {
+  font-size: 0.875rem;
+  margin: 0.3rem auto;
+  display: inline-block;
+  font-weight: 500;
+}
+
+ul,
+ol {
+  list-style: inside none;
+}
+
+li {
+  margin: 1rem;
+}
+
