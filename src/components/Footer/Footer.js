@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Footer = () => {
@@ -11,7 +12,7 @@ const Footer = () => {
           <p>Hecho con 🧡 para Colombia</p>
         </div>
         <div className="flex items-center my-2 my-md-0">
-          <img src="/gmail.png" className="w-4 h-4" />
+          <Image src="/gmail.png" width={40} height={40} alt="icon-email" />
           <span className="ml-2">derechopeticiones@gmail.com</span>
         </div>
       </div>
