@@ -2,11 +2,10 @@ import React from 'react'
 
 const MainLayout = ({ children }) => {
   return (
-    <div className='bg-indigo-900'>
-      <div className='max-w-3xl mx-auto text-white py-4'>
+   
+      <div className='max-w-4xl m-auto px-2 py-4 my-auto' id="print">
         {children}
-      </div>
-    </div>
+      </div> 
   )
 }
 

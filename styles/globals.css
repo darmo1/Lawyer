@@ -48,3 +48,8 @@ li {
   margin: 1rem;
 }
 
+.btn-paypal-center,#btn-epayco{
+  display: flex;
+  justify-content: center;
+}
+
