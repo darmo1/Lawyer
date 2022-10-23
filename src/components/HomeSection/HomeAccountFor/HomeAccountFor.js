@@ -4,7 +4,7 @@ import HomeStep from "./HomeStep/HomeStep";
 const HomeAccountFor = () => {
   return (
     <div id="HomeAccountFor">
-      <h1 className="text-center text-2xl my-8">
+      <h1 className="text-center text-2xl md:text-4xl my-8">
         ¿Cómo es elaborar tu peticion de revocatoria en unos simples pasos?
       </h1>
       <div className="flex flex-wrap justify-center items-center">

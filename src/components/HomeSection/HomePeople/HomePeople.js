@@ -8,7 +8,7 @@ const HomePeople = ({ authorData }) => {
   }
 
   return (
-    <div className={`flex flex-col justify-center `}>
+    <div className={`flex flex-col justify-center `} id="home-people">
       <h1 className="text-start text-4xl my-4">People</h1>
       <div className="flex flex-wrap justify-around">
         {authorData.map(({ _id, ...props }) => (

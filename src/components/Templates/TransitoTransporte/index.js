@@ -7,6 +7,9 @@ import { becomeDate } from "../../../../utils/getDate";
 export const TemplateTransitoTransporte = ({ valuesForm, Component }) => {
   const date = new Date();
 
+  const location = document.location
+  const originUrl = location?.origin
+
   const {
     primerNombre,
     segundoNombre,
@@ -28,7 +31,6 @@ export const TemplateTransitoTransporte = ({ valuesForm, Component }) => {
   } = valuesForm;
   const router = useRouter();
   const { route } = router;
-  console.log(router);
 
   return (
     <MainLayout>
@@ -105,7 +107,7 @@ export const TemplateTransitoTransporte = ({ valuesForm, Component }) => {
         <div className="border my-2 "></div>
       </main>
 
-      { route !== '/response' &&
+      { route === '/peticion-tyt/summaryForm' &&
         <form className="flex  ">
           <button className="border bg-yellow-400">
             Obtener documento PDF - es momento de pagar
@@ -124,9 +126,9 @@ export const TemplateTransitoTransporte = ({ valuesForm, Component }) => {
             data-epayco-country="CO"
             data-epayco-test="true"
             data-epayco-external="false"
-            data-epayco-response="http://localhost:3000/response"
-            epayco-rejected="http://localhost:3000/404"
-            data-epayco-confirmation="http://localhost:3000/response"
+            data-epayco-response={`${originUrl}/response`}
+            epayco-rejected={`${originUrl}/404`}
+            data-epayco-confirmation={`${originUrl}/response`}
             data-epayco-button="https://multimedia.epayco.co/dashboard/btns/btn3.png"
           ></Script>
         </form>

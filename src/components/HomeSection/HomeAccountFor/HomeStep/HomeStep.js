@@ -18,7 +18,7 @@ const HomeStep = ({ title, description = "eh", image }) => {
       </div>
 
       <div className="flex flex-col justify-start items-center my-6">
-        <h2 className="text-lg text-center justify-items-stretch">{title}</h2>
+        <h2 className="text-lg md:font-[500] text-center justify-items-stretch">{title}</h2>
         <p className="text-md border">{description}</p>
       </div>
     </div>

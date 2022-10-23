@@ -3,9 +3,9 @@ import { useRouter } from "next/router";
 import { TemplateTransitoTransporte } from "../../src/components";
 import BuildDocument from "../../src/components/Templates/TransitoTransporte/BuildDocument/BuildDocument";
 import { jsPDF } from "jspdf";
-import { renderToString } from "react-dom/server";
-import { withTyT } from "../../HOCs/withTyT";
 import GlobalLayout from "../../src/Layout/GlobalLayout";
+import { toast } from 'react-toastify';
+
 
 const Response = () => {
   const router = useRouter();
@@ -34,6 +34,20 @@ const Response = () => {
 
       callback: function (pdf) {
         pdf.save("doc.pdf");
+        toast("Wow ✅🎉✨ Has descargado el pdf exitosamente!, vuelve pronto", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          })
+          setTimeout( () => {
+            router.push('/')
+            localStorage.removeItem('valForm')
+          }, 5000)
       },
     });
   };

@@ -17,10 +17,18 @@ const HomeSection = ({ authorData }) => {
       </MainLayout>
       <div className="bg-wave-pattern bg-cover min-h-[300px] w-full bg-no-repeat rotate-180"></div>
       </section>
+
+      <section className="">
       <MainLayout>
         <HomeAccountFor />
-        <HomeBlogs />
       </MainLayout>
+      <div className="bg-wave-pattern bg-cover min-h-[300px] w-full bg-no-repeat  "></div>
+      </section>
+      <section>
+        <MainLayout>
+        <HomeBlogs />
+        </MainLayout>
+      </section>
       <section className={`py-16 ${style["clip-path"]} bg-blue-400`}>
         <MainLayout>
           <HomePeople authorData={authorData} />
